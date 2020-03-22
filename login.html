@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Login page</title>
+</head>
+<script language="JavaScript">
+    function submitForm() {
+        let userName = document.forms["loginForm"]["username"].value;
+        let password = document.forms["loginForm"]["password"].value;
+        if(
+            (userName == 'inudi' &&  password =='inudi') ||
+            (userName == 'kaynu' &&  password =='kaynu') ||
+            (userName == 'unicorn' &&  password =='rainbow')
+        ){
+            alert("Login successfully");
+        } else {
+            alert("Login Failed");
+        }
+    }
+</script>
+<body style="background-color:lightblue">
+    <!-- Page Heading -->
+    <h1>
+        login page
+    </h1>
+    <div >
+        <form method="post" name="loginForm" onsubmit="submitForm()">
+            <div>
+                <label>
+                    Name : <input type="text" name="username" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Password : <input type="password" name="password">
+                </label>
+            </div>
+            <div>
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
